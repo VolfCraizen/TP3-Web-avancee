@@ -1,0 +1,50 @@
+Fait l'inclusion des usagers	//DONE
+
+Inclusion tableau de bord	//DONE
+
+
+
+
+Ajouter les tables /champs nécessaires dans votre base de données pour pouvoir gérer les utilisateurs.	//DONE
+
+• Les mots de passe doivent être chiffrés.	//DONE
+
+• Créer une session sécurisée pour les clients et les administrateurs.	
+
+• Gérer les privilèges d'accès aux pages
+
+• L'administrateur doit pouvoir ajouter du contenu au site à l'aide de l'interface.	//DONE
+
+• Gérer la connexion de l'utilisateur, le journal de bord, avec l'adresse IP, la	//DONE
+date, le nom d'utilisateur (si l'utilisateur est connecté, sinon s'inscrire en
+tant que visiteur) et la page visitée.
+
+• Le journal de bord doit être accessible à partir du menu de navigation de votre site.		//DONE
+
+• Ajouter une nouvelle fonctionnalité de votre choix	//DONE
+o Enregistrer au format PDF
+o Créer un site Web en deux langues.	//DONE
+
+
+
+POUR EXAM!!! Demande son aide pour règler ton exercice 21
+
+-Nouvelle vérification de lien. Vérifie si ça marche.	//DONE sauf pour les méthodes	//DONE C'étais un if(method_exists($controller, $method))
+
+-Test langues	//DONE
+
+-Test creation edit et supprime admin	//DONE
+
+-Test creation employer	//DONE
+
+-Test permission employer	//DONE
+
+-Test permission usager		//DONE
+
+-Test permission guest		//DONE
+
+-Test connections et déconnexion	//DONE
+
+-Test mauvaise données login	//DONE
+
+-Test mauvaise données 

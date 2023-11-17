@@ -1,0 +1,23 @@
+Controller
+
+lang/change/EN
+
+Récupère EN
+
+Sauvegarde le dans $_SESSION
+
+
+Twig
+
+If $_SESSION == EN {
+
+	include('language/EN.php');
+
+} elseif {
+
+	include('language/FR.php');
+
+}
+
+
+

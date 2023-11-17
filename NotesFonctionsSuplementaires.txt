@@ -1,0 +1,127 @@
+Journal de bord:
+
+-Nouvelle table dans BD	
+	id
+	adresse ip	(Dans variable $_SERVER, il y a l'adresse ip)
+	date	(Peut être générer avec php
+	nom	(Si il n'y a pas de $_SESSION, entre guest)
+	page courante	(Dans variable $_SERVER, il y a le url)
+
+-Fait un Model	(Mais le fillable)
+
+-Le Modal est un enfant de CRUD
+
+-Insert en passant un tableau	Insert($log)	
+$log[ip] == $_SERVER[le nom]	
+$log[date] == createDate()	ou 	dans la db utilise default current date
+$log[page] == $_SERVER[le nom]
+Utilise le code de user update comme base pour ceci
+
+-Exécute dans l'index car il faut passer par là pour aller à la prochaine page	(Il check la page une fois qu'il est rendu sur la page)
+
+
+
+
+
+Email:
+
+il y a une classe phpmailer (github on peut installer avec composer. Lis documentation sur git) https://github.com/PHPMailer/PHPMailer
+
+info de courriel vient du serveur de courriel (fait des recherches)
+
+
+
+
+
+Enregistrer au format PDF
+
+Un des plus simple
+
+DOMpdf
+
+Dois faire un html spécial DANS LE $dompdf->loadHtml pour que on appelle pour faire le pdf
+
+$dompdf = new Dompdf();
+$dompdf->loadHtml('passe le code html au complet et le css est dans les balises style');
+
+Documentation moin bonne mais beaucoup de tutoriel en ligne
+
+Click et génère un pdf du sujet. (Sur les show peut être?)
+
+Accepte CSS et HTML
+
+
+
+
+
+Téléverser (upload) des images et enregistrer dans la base de
+données pour les publier sur le site Web,
+
+Sauvegarder dans le serveur
+
+input type="file"
+
+https://www.w3schools.com/php/php_file_upload.asp
+
+À part quelques changements et ajouts,, le code est prêt
+
+<form action="upload.php" method="post" enctype="multipart/form-data">		enctype="multipart/form-data" permet de prendre les formats de fichier
+  Select image to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload">		name="fileToUpload" nom du post
+  <input type="submit" value="Upload Image" name="submit">
+</form>
+
+Créer dossier uploads ou autre nom pour mettre les fichier dedans
+
+$target_dir = "uploads/";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+Dans la BD, tu ne met pas le fichier au complet mais le nom
+
+
+
+
+
+Créer un site Web en deux langues.
+
+Non
+VIEW_FR :
+<h1> Salut </h1>
+
+VIEW_EN :
+<h1> Hello </h1>
+
+Oui
+EN.php
+return $lang = [
+'text_hello' = 'hello'
+]
+
+FR.php
+return $lang = [
+'text_hello' = 'salut'
+]
+
+require(FR.php)->cookie / session
+View:
+<h1> $lang['text_hello'] </h1>
+
+
+Quand tu click sur le btn langue:
+require(FR.php)->cookie / session
+
+-Dossier de langues qui contient les php de langue
+
+-le html va chercher ses valeurs dans le dossier de langue
+
+http://localhost:8080/WebAvancee/tp3/lang
+
+if $_GET['lang'] == EN
+
+$_SESSION['lang'] = EN
+
+http://localhost:8080/WebAvancee/tp3/langue/change/EN
+
+C'est comme un delete, update etc ou il se fait éxecuter et ça change la langue. Ensuite fonctionnement normale

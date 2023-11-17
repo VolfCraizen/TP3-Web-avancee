@@ -1,0 +1,137 @@
+Journal de bord pas fait avec le prof mais il peut aider
+
+composer pour faire format pdf et e-mail (Check documentation)
+
+Met les users avec leurs mots de passe avec la remise sinon c'est considérer non conclus et c'est 20 - 5 comme pénalité
+
+Journal de bord est un registre de tout les interactions		(Le insert est dans l'index du site car le user passe toujours par là lors d'un changement de page)
+
+-Créer une table	avec les info suivente
+
+	-date
+
+	-adresse ip du serveur
+
+	-page visité
+
+	-id de l'utilisateur actif
+
+-admin peut le voir sur une page
+
+-Ces info sont inserées dans la base de données à chaque fois qu'il y a un changement de page
+
+
+
+
+Remise le 22
+
+4 étapes d'un login
+
+1) SELECT * FROM user WHERE username = ?
+
+2) COUNT === 1	(if false, get out)
+
+3) PASSWORD MATCH 
+
+4) SESSION
+
+$_cookies reste au niveau du navigateur
+
+$_session reste au niveau de la session et arrête une fois fini (Avec le serveur)
+
+print_r($_SERVER)
+SERVER_ADDR	pour ip de serveur
+
+
+
+
+
+
+Demande au prof:
+
+Quel est la relation entre le tableau de bord et les usager	//DONE 	Ils n'ont pas besoin de relation
+
+Est-ce que la validation est celle avec le $validation->name('username')->value($username)->max(50)->required()->pattern('email');	//DONE	Oui
+
+Est-ce que les clients peuvent être exclus?	//DONE Oui
+
+Est-ce que la relation que j'ai faite pour client et usager est bonne?	//DONE Oui même parfaite
+
+Pourquoi la validation de edit quand elle est fausse donne une erreur 404?	//DONE Pas bonne validation
+
+Comment rediriger ou annoncer un erreur de duplication?
+
+Lors de déconnexion, garde la mème langue de façon propre et professionel
+
+Comment empêcher une érreur de methode dans le url
+
+Encryption de l'adresse du serveur?	//DONE Non
+
+
+
+À faire en ce moment:
+
+-Trouver d'où vient guest pour l'appliquer	//DONE Twig
+
+-Gérer les permissions	(Les if sur les boutons et les fonctions des controllers pour bloquer les usager non permis)	//DONE
+
+-Est-ce que le site tient bien les permissions en compte?
+
+-Check les url pour les bloquer
+
+
+
+QUIRKS : 
+
+Sur WebDev, delete avec foreign key retourne sur la même page sans rien.
+
+
+
+
+À faire:
+
+!!!Pas écrit dans l'énoncé mais fait la validation!!!	
+
+-OPTIONAL change comment tes folder et fichier son organisé
+
+-modifie pour accueillir les changement de langue (voir notes sur fonction suplémentaire)
+
+-modifie le header pour les liens additionnels (journal de bord (log), login, 	
+
+-Confirme que le tp marche encore
+
+-import validation
+
+-fait validation des parties du tp déjà fait
+
+-Ajoute les tâbles extra pour un login et peut-être plus
+
+-Ajoute table pour journal de bord
+
+-Ajoute les users
+
+-Fait le create avec users
+
+-confirme leur validation de creation
+
+-confirme incryption
+
+-Fait fonctionner le journal de bord
+
+-Change le pdf pour inclure les nouvelles valeurs
+
+-Assure toi que le pdf fonctionne avec ce que tu a
+
+-Assure toi que la base de données fonctionne sur WebDev
+
+-Remet le travail sur Webdev
+
+-Met un user admin et un normal avec leur password dans le pdf
+
+-Met le lien dans le pdf
+
+-Remet sur github
+
+-Met le lien dans le pdf
+
+-Quand fini, delete les fichiers txt non nécéssaire comme celui-ci
